@@ -1,14 +1,19 @@
 import { Card, Divider, Typography } from '@mui/material';
 import { useContext } from 'react';
 import { TodoContext } from '../../context/TodoContext';
+import FailToFetch from '../Errors/FailToFetch';
 import LoadingSpinner from '../Layouts/LoadingSpinner';
 import TaskPriorityChart from './TaskPriorityChart';
 
 const ChartCard = () => {
-	const { taskCountsByPriority, loading } = useContext(TodoContext);
+	const { taskCountsByPriority, loading, error } = useContext(TodoContext);
 
 	if (loading) {
 		return <LoadingSpinner />;
+	}
+
+	if (!loading && error) {
+		return <FailToFetch error={error} />;
 	}
 
 	return (

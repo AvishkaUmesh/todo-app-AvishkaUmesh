@@ -12,7 +12,6 @@ const TodoProvider = ({ children }) => {
 	useEffect(() => {
 		const fetchTodos = async () => {
 			try {
-				// Set loading to true before fetching todos
 				dispatch({ type: 'GET_TODOS' });
 
 				const response = await axios.get('https://6363c8f68a3337d9a2e7d805.mockapi.io/api/to-do');
@@ -22,8 +21,7 @@ const TodoProvider = ({ children }) => {
 				dispatch({ type: 'SET_TASK_COUNTS', payload: calculateTaskCountsByPriority(todos) });
 			} catch (error) {
 				console.error('Error fetching todos:', error);
-				// Handle error if needed and set loading to false
-				dispatch({ type: 'SET_TODOS', payload: [], loading: false });
+				dispatch({ type: 'SET_TODOS_ERROR' });
 			}
 		};
 
