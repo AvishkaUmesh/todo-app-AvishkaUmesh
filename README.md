@@ -48,3 +48,25 @@ npm run dev
 ```
 
 This will start the development server and open the Todo App in your default web browser.
+
+To run the `lint` and `lint:fix` scripts defined in `package.json`, follow these instructions:
+
+1. **Run Linting:**
+
+    To run the ESLint linting process on your JavaScript and JSX files, use the following npm command:
+
+    ```bash
+    npm run lint
+    ```
+
+    This command will execute ESLint and analyze your code for potential issues based on the defined rules. It will output any errors or warnings to the console.
+
+2. **Run Linting with Automatic Fixes:**
+
+    If you want ESLint to automatically fix fixable issues in your code, use the `lint:fix` script:
+
+    ```bash
+    npm run lint:fix
+    ```
+
+    ESLint will attempt to fix any fixable issues and update your files accordingly.
