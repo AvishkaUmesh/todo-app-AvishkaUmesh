@@ -7,18 +7,20 @@ const Dashboard = () => {
 	return (
 		<div
 			style={{
+				display: 'flex',
+				flexDirection: 'column',
+				minHeight: '100vh',
 				backgroundColor: '#F5F5F5',
-				paddingBottom: '35px',
 			}}
 		>
 			<Sidebar />
 			<Header />
 			<div
 				style={{
-					marginLeft: '272px',
-					paddingLeft: '20px',
+					flex: 1,
+					marginLeft: '254px',
+					paddingLeft: '10px',
 					paddingRight: '20px',
-					// width: 'calc(100% - 272px)',
 					overflowX: 'auto',
 				}}
 			>

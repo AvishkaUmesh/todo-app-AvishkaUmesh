@@ -22,7 +22,7 @@ const AlertText = () => {
 				efficiently with Acmy.
 			</Typography>
 			<a
-				href="http://"
+				href="#"
 				style={{
 					color: '#BC006D',
 					fontSize: '14px',

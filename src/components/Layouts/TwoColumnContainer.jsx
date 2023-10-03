@@ -10,6 +10,7 @@ const TwoColumnContainer = () => {
 			spacing={2}
 			style={{
 				marginTop: '10px',
+				marginBottom: '25px',
 			}}
 		>
 			{/* First column */}
