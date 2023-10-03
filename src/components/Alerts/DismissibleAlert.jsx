@@ -5,8 +5,8 @@ import AlertText from './AlertText';
 
 const CloseBtnStyles = {
 	position: 'relative',
-	top: '-42px',
-	right: '-15px',
+	top: '-45px',
+	right: '-10px',
 
 	width: '24px',
 	height: '24px',

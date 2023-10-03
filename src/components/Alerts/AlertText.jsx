@@ -25,6 +25,7 @@ const AlertText = () => {
 				href="http://"
 				style={{
 					color: '#BC006D',
+					fontSize: '14px',
 					marginTop: '10px',
 					display: 'block',
 				}}
