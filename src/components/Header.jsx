@@ -1,5 +1,4 @@
 import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
-import React from 'react';
 
 import ChevronDownIcon from '../assets/Chevron-down.svg';
 import NotificationIcon from '../assets/Notifications.svg';

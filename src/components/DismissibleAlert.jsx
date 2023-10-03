@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import { Alert, IconButton, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CloseIcon from '../assets/Close.svg';
 import Vector from '../assets/Vector.svg';
 
+/* eslint-disable */
 const StyledAlert = styled(Alert)(({ theme }) => ({
 	backgroundColor: 'white',
 	color: 'black',
@@ -18,14 +19,17 @@ const AlertContainer = styled.div(({ theme }) => ({
 	marginLeft: '20px',
 }));
 const InnerContainer = styled.div(({ theme }) => ({
+	 
 	display: 'flex',
 	alignItems: 'center',
 	gap: '20px',
 	padding: '20px',
 }));
 
+/* eslint-enable */
+
 const DismissibleAlert = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(true); // eslint-disable-line
 
 	const handleClose = () => {
 		setOpen(false);

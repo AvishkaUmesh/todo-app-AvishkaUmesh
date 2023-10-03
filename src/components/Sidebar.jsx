@@ -1,5 +1,4 @@
 import { Drawer, List, ListItemButton, ListItemText, Typography } from '@mui/material';
-import React from 'react';
 
 import DashboardIcon from '../assets/Dashboard.svg';
 

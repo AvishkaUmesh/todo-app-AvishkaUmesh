@@ -1,5 +1,6 @@
 import { Box, ListItem, ListItemText, Typography } from '@mui/material';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import PriorityHighIcon from '../../assets/Priority-High.svg';
 import PriorityLowIcon from '../../assets/Priority-Low.svg';
 import PriorityMediumIcon from '../../assets/Priority-Medium.svg';
@@ -76,6 +77,16 @@ const TodoItem = ({ task }) => {
 			)}
 		</>
 	);
+};
+
+TodoItem.propTypes = {
+	task: PropTypes.shape({
+		id: PropTypes.string.isRequired,
+		priority: PropTypes.string.isRequired,
+		todo: PropTypes.string.isRequired,
+		completed: PropTypes.bool.isRequired,
+		createdAt: PropTypes.string.isRequired,
+	}),
 };
 
 export default TodoItem;

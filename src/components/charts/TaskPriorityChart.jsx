@@ -1,6 +1,6 @@
 import { Chip, Typography } from '@mui/material';
 import 'chart.js/auto';
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Doughnut } from 'react-chartjs-2';
 
 const TaskPriorityChart = ({ taskCountsByPriority }) => {
@@ -50,6 +50,14 @@ const TaskPriorityChart = ({ taskCountsByPriority }) => {
 			</div>
 		</div>
 	);
+};
+
+TaskPriorityChart.propTypes = {
+	taskCountsByPriority: PropTypes.shape({
+		HIGH: PropTypes.number.isRequired,
+		MEDIUM: PropTypes.number.isRequired,
+		LOW: PropTypes.number.isRequired,
+	}).isRequired,
 };
 
 export default TaskPriorityChart;

@@ -1,5 +1,5 @@
 import { Card, Divider, Grid, Typography } from '@mui/material';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { TodoContext } from '../context/TodoContext';
 import ActivityList from './ActivityFeed/ActivityList';
 import TodoList from './Todo/TodoList';

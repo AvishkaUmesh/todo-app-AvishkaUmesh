@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { createContext, useEffect, useState } from 'react';
 import { calculateTaskCountsByPriority } from '../utils/utils';
 
 const TodoContext = createContext();
@@ -23,6 +24,10 @@ const TodoProvider = ({ children }) => {
 	}, []);
 
 	return <TodoContext.Provider value={{ todos, taskCountsByPriority }}>{children}</TodoContext.Provider>;
+};
+
+TodoProvider.propTypes = {
+	children: PropTypes.node.isRequired,
 };
 
 export { TodoContext, TodoProvider };

@@ -1,4 +1,5 @@
 import { Box, ListItem, ListItemText, Typography } from '@mui/material';
+import PropTypes from 'prop-types';
 
 const ActivityItem = ({ activity }) => {
 	return (
@@ -14,6 +15,15 @@ const ActivityItem = ({ activity }) => {
 			</Typography>
 		</>
 	);
+};
+
+ActivityItem.propTypes = {
+	activity: PropTypes.shape({
+		id: PropTypes.number.isRequired,
+		image: PropTypes.string.isRequired,
+		activity: PropTypes.string.isRequired,
+		date: PropTypes.string.isRequired,
+	}).isRequired,
 };
 
 export default ActivityItem;
