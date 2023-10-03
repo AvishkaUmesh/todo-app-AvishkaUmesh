@@ -8,8 +8,7 @@ import ActivityItem from './ActivityItem';
 const activityList = [
 	{
 		id: 1,
-		activity:
-			"Contract #00124 need John Beige's signature Irure ad excepteur lorem.Irure ad excepteur lorem.Irure ad excepteur lorem.Irure ad excepteur lorem.",
+		activity: "Contract #00124 need John Beige's signature Irure ad excepteur lorem.Irure ad excepteur lorem.",
 		image: avatar1,
 		date: 'Sep 16, 2022 at 11:30 AM',
 	},
