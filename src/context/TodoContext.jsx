@@ -1,29 +1,36 @@
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import { createContext, useEffect, useState } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { calculateTaskCountsByPriority } from '../utils/utils';
+import { initialState, reducer } from './todoReducer';
 
-const TodoContext = createContext();
+const TodoContext = React.createContext();
 
 const TodoProvider = ({ children }) => {
-	const [todos, setTodos] = useState([]);
-	const [taskCountsByPriority, setTaskCountsByPriority] = useState({});
+	const [state, dispatch] = useReducer(reducer, initialState);
 
 	useEffect(() => {
 		const fetchTodos = async () => {
 			try {
+				// Set loading to true before fetching todos
+				dispatch({ type: 'SET_TODOS', payload: [], loading: true });
+
 				const response = await axios.get('https://6363c8f68a3337d9a2e7d805.mockapi.io/api/to-do');
-				setTodos(response.data);
-				setTaskCountsByPriority(calculateTaskCountsByPriority(response.data)); // Update task counts by priority
+				const todos = response.data;
+
+				dispatch({ type: 'SET_TODOS', payload: todos });
+				dispatch({ type: 'SET_TASK_COUNTS', payload: calculateTaskCountsByPriority(todos) });
 			} catch (error) {
 				console.error('Error fetching todos:', error);
+				// Handle error if needed and set loading to false
+				dispatch({ type: 'SET_TODOS', payload: [], loading: false });
 			}
 		};
 
 		fetchTodos();
 	}, []);
 
-	return <TodoContext.Provider value={{ todos, taskCountsByPriority }}>{children}</TodoContext.Provider>;
+	return <TodoContext.Provider value={state}>{children}</TodoContext.Provider>;
 };
 
 TodoProvider.propTypes = {

@@ -1,4 +1,4 @@
-import { Divider, Grid, List, ListItem, Typography } from '@mui/material';
+import { CircularProgress, Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { TodoContext } from '../../context/TodoContext';
@@ -7,7 +7,7 @@ import TodoItem from './TodoItem';
 const ITEMS_PER_PAGE = 8;
 
 const TodoList = () => {
-	const { todos } = useContext(TodoContext);
+	const { todos, loading } = useContext(TodoContext);
 	const [currentPage, setCurrentPage] = useState(0);
 
 	const handlePageChange = (selectedPage) => {
@@ -29,13 +29,21 @@ const TodoList = () => {
 			<ListItem>
 				<Typography variant="h6">Tasks</Typography>
 			</ListItem>
-			{paginatedTodos.map((task) => (
-				<React.Fragment key={task.id}>
-					<Divider></Divider>
-					<TodoItem task={task} />
-				</React.Fragment>
-			))}
-			<Divider></Divider>
+
+			{loading ? (
+				<ListItem style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
+					<CircularProgress />
+				</ListItem>
+			) : (
+				paginatedTodos.map((task) => (
+					<React.Fragment key={task.id}>
+						<Divider />
+						<TodoItem task={task} />
+					</React.Fragment>
+				))
+			)}
+
+			<Divider />
 
 			<Grid container justifyContent="center">
 				<ReactPaginate
@@ -54,4 +62,5 @@ const TodoList = () => {
 		</List>
 	);
 };
+
 export default TodoList;

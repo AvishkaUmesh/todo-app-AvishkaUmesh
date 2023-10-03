@@ -1,10 +1,18 @@
-import { Card, Divider, Typography } from '@mui/material';
+import { Card, CircularProgress, Divider, Typography } from '@mui/material';
 import { useContext } from 'react';
 import { TodoContext } from '../../context/TodoContext';
 import TaskPriorityChart from './TaskPriorityChart';
 
 const ChartCard = () => {
-	const { taskCountsByPriority } = useContext(TodoContext);
+	const { taskCountsByPriority, loading } = useContext(TodoContext);
+
+	if (loading) {
+		return (
+			<Card>
+				<CircularProgress />
+			</Card>
+		);
+	}
 
 	return (
 		<Card
