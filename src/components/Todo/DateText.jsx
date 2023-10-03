@@ -9,7 +9,7 @@ const DateText = ({ createdAt }) => {
 			style={{
 				marginLeft: '8px',
 				color: '#757575',
-				marginTop: '12px',
+				marginTop: '24px',
 				marginBottom: '20px',
 				fontSize: '12px',
 			}}
