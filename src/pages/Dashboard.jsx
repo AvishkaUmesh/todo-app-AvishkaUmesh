@@ -8,6 +8,7 @@ const Dashboard = () => {
 		<div
 			style={{
 				backgroundColor: '#F5F5F5',
+				paddingBottom: '35px',
 			}}
 		>
 			<Sidebar />

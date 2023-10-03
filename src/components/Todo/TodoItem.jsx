@@ -15,7 +15,7 @@ const TodoItem = ({ task }) => {
 	};
 	return (
 		<>
-			<ListItem style={{ height: '48px' }}>
+			<ListItem style={{ height: '48px', marginTop: '5px', marginBottom: '5px' }}>
 				<Box component="span" sx={{ mr: 2 }}>
 					<img src={priorityIcons[task.priority]} alt={`${task.priority} priority`} />
 				</Box>

@@ -16,13 +16,13 @@ const activityList = [
 
 	{
 		id: 2,
-		activity: "Franklin More's professional review is pending",
+		activity: "Franklin More's professional review is pending. Irure ad excepteur lorem.Irure ad excepteur lorem.",
 		image: avatar2,
 		date: 'Sep 16, 2022 at 11:40 AM',
 	},
 	{
 		id: 3,
-		activity: 'Internship Agreement template is not completed',
+		activity: 'Internship Agreement template is not completed. Irure ad excepteur lorem.Irure ad excepteur lorem.',
 		image: avatar1,
 		date: 'Sep 16, 2022 at 11:50 AM',
 	},

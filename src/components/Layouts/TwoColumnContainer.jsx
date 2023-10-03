@@ -13,12 +13,12 @@ const TwoColumnContainer = () => {
 			}}
 		>
 			{/* First column */}
-			<Grid item xs={7}>
+			<Grid item xs={8}>
 				<TodoList />
 			</Grid>
 
 			{/* Second column */}
-			<Grid item xs={5}>
+			<Grid item xs={4}>
 				<ActivityList />
 
 				<ChartCard />

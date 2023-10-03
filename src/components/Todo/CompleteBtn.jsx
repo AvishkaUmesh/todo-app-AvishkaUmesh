@@ -5,11 +5,8 @@ const CompleteBtn = ({ completed }) => {
 	return (
 		<>
 			{completed && (
-				<Typography
-					variant="body2"
-					style={{ marginLeft: '52px', color: '#BC006D', marginTop: '12px', marginBottom: '20px' }}
-				>
-					Mark as Complete
+				<Typography variant="body2" style={{ marginLeft: '52px', color: '#BC006D', marginBottom: '10px' }}>
+					Mark as Done
 				</Typography>
 			)}
 		</>
