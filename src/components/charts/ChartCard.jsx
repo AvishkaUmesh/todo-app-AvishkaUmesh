@@ -27,7 +27,7 @@ const ChartCard = () => {
 					marginBottom: '8px',
 				}}
 			>
-				Task Priorities
+				Tasks Priorities
 			</Typography>
 			<Divider></Divider>
 			{Object.keys(taskCountsByPriority).length > 0 ? (
