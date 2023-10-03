@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const CompleteBtn = ({ completed }) => {
 	return (
 		<>
-			{completed && (
+			{!completed && (
 				<Typography variant="body2" style={{ marginLeft: '52px', color: '#BC006D', marginBottom: '10px' }}>
 					Mark as Done
 				</Typography>
