@@ -8,7 +8,13 @@ const Header = () => {
 	return (
 		<AppBar
 			position="static"
-			style={{ marginLeft: '254px', width: 'calc(100% - 254px)', background: 'white', color: 'black' }}
+			style={{
+				marginLeft: '254px',
+				width: 'calc(100% - 254px)',
+				background: 'white',
+				color: 'black',
+				paddingTop: '8px',
+			}}
 		>
 			<Toolbar style={{ justifyContent: 'space-between' }}>
 				<Typography variant="h6" style={{ fontWeight: 'bold' }}>
