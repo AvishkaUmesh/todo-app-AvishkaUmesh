@@ -15,7 +15,6 @@ const Header = () => {
 					Dashboard
 				</Typography>
 
-				{/* Icons and SVG image aligning to the right */}
 				<div style={{ display: 'flex', alignItems: 'center' }}>
 					<img
 						src={NotificationIcon}

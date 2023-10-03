@@ -9,7 +9,7 @@ const TwoColumnContainer = () => {
 			container
 			spacing={2}
 			style={{
-				marginTop: '20px',
+				marginTop: '10px',
 			}}
 		>
 			{/* First column */}
@@ -19,7 +19,6 @@ const TwoColumnContainer = () => {
 
 			{/* Second column */}
 			<Grid item xs={5}>
-				{/* Content for the second column */}
 				<ActivityList />
 
 				<ChartCard />
