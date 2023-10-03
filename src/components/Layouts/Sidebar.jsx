@@ -1,6 +1,6 @@
 import { Drawer, List, ListItemButton, ListItemText, Typography } from '@mui/material';
 
-import DashboardIcon from '../assets/Dashboard.svg';
+import DashboardIcon from '../../assets/Dashboard.svg';
 
 const Sidebar = () => {
 	return (

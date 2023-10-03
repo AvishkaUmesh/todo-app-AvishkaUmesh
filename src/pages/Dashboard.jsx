@@ -1,7 +1,7 @@
-import DismissibleAlert from '../components/DismissibleAlert';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import TwoColumnContainer from '../components/TwoColumnContainer';
+import DismissibleAlert from '../components/Alerts/DismissibleAlert';
+import Header from '../components/Layouts/Header';
+import Sidebar from '../components/Layouts/Sidebar';
+import TwoColumnContainer from '../components/Layouts/TwoColumnContainer';
 
 const Dashboard = () => {
 	return (

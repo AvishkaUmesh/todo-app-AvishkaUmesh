@@ -1,8 +1,8 @@
 import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 
-import ChevronDownIcon from '../assets/Chevron-down.svg';
-import NotificationIcon from '../assets/Notifications.svg';
-import ProfileIcon from '../assets/Profile.svg';
+import ChevronDownIcon from '../../assets/Chevron-down.svg';
+import NotificationIcon from '../../assets/Notifications.svg';
+import ProfileIcon from '../../assets/Profile.svg';
 
 const Header = () => {
 	return (

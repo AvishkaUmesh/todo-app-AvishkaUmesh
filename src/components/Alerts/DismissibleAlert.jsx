@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { Alert, IconButton, Typography } from '@mui/material';
 import { useState } from 'react';
-import CloseIcon from '../assets/Close.svg';
-import Vector from '../assets/Vector.svg';
+import CloseIcon from '../../assets/Close.svg';
+import Vector from '../../assets/Vector.svg';
 
 /* eslint-disable */
 const StyledAlert = styled(Alert)(({ theme }) => ({
@@ -19,7 +19,6 @@ const AlertContainer = styled.div(({ theme }) => ({
 	marginLeft: '20px',
 }));
 const InnerContainer = styled.div(({ theme }) => ({
-	 
 	display: 'flex',
 	alignItems: 'center',
 	gap: '20px',
