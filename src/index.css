@@ -5,16 +5,23 @@
 
 .pagination li {
 	display: inline-block;
+	width: 24px;
+	height: 24px;
 	padding: 8px;
 	margin: 0 4px;
 	cursor: pointer;
+	border: 1px solid #dfe3e8;
+	color: #000000;
+	text-align: center;
 }
 
 .pagination li.active {
-	background-color: #007bff;
-	color: white;
+	border: 2px solid #bc006d;
+	color: #bc006d;
+	background-color: transparent;
 }
 
 .pagination li:hover {
-	background-color: #e9ecef;
+	border: 2px solid #bc006d;
+	color: #bc006d;
 }

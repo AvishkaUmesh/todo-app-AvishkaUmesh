@@ -1,4 +1,5 @@
 import { Box, ListItem, ListItemText, Typography } from '@mui/material';
+import moment from 'moment';
 import PriorityHighIcon from '../../assets/Priority-High.svg';
 import PriorityLowIcon from '../../assets/Priority-Low.svg';
 import PriorityMediumIcon from '../../assets/Priority-Medium.svg';
@@ -20,7 +21,6 @@ const TodoItem = ({ task }) => {
 					<img src={priorityIcons[task.priority]} alt={`${task.priority} priority`} />
 				</Box>
 				<ListItemText primary={task.todo} />
-
 				<Box component="span" sx={{ ml: 2 }}>
 					{task.completed && (
 						<span
@@ -50,6 +50,19 @@ const TodoItem = ({ task }) => {
 						</span>
 					)}
 				</Box>
+
+				<Typography
+					variant="body2"
+					style={{
+						marginLeft: '8px',
+						color: '#757575',
+						marginTop: '12px',
+						marginBottom: '20px',
+						fontSize: '12px',
+					}}
+				>
+					{moment(task.createdAt).format('MMM DD')}
+				</Typography>
 
 				<br />
 			</ListItem>

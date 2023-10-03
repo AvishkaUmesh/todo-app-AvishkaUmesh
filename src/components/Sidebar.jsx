@@ -30,7 +30,12 @@ const Sidebar = () => {
 
 			<List>
 				<ListItemButton
-					style={{ borderRadius: '40px', backgroundColor: '#EBE6ED1A', padding: '5px', margin: '10px' }}
+					style={{
+						borderRadius: '40px',
+						backgroundColor: '#EBE6ED1A',
+						padding: '5px',
+						margin: '70px 10px 10px 10px',
+					}}
 				>
 					<ListItemText
 						primary={
@@ -43,7 +48,7 @@ const Sidebar = () => {
 								<img
 									src={DashboardIcon}
 									alt="Dashboard Icon"
-									style={{ marginRight: '12px', height: '24px', width: '24px' }}
+									style={{ marginRight: '12px', height: '24px', width: '24px', marginLeft: '8px' }}
 								/>
 								Dashboard
 							</Typography>

@@ -11,17 +11,20 @@ const activityList = [
 		activity:
 			"Contract #00124 need John Beige's signature Irure ad excepteur lorem.Irure ad excepteur lorem.Irure ad excepteur lorem.Irure ad excepteur lorem.",
 		image: avatar1,
+		date: 'Sep 16, 2022 at 11:30 AM',
 	},
 
 	{
 		id: 2,
 		activity: "Franklin More's professional review is pending",
 		image: avatar2,
+		date: 'Sep 16, 2022 at 11:40 AM',
 	},
 	{
 		id: 3,
 		activity: 'Internship Agreement template is not completed',
 		image: avatar1,
+		date: 'Sep 16, 2022 at 11:50 AM',
 	},
 ];
 

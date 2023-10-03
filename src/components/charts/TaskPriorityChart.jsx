@@ -4,12 +4,15 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const TaskPriorityChart = ({ taskCountsByPriority }) => {
+	const labels = ['High', 'Medium', 'Low'];
+	const rearrangedData = labels.map((label) => taskCountsByPriority[label.toUpperCase()] || 0);
+
 	const chartData = {
-		labels: Object.keys(taskCountsByPriority),
+		labels,
 		datasets: [
 			{
-				data: Object.values(taskCountsByPriority),
-				backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)'],
+				data: rearrangedData,
+				backgroundColor: ['#EB5757', '#F2C94C', '#2F80ED'], // Rearranged colors
 				borderWidth: 1,
 			},
 		],
@@ -31,19 +34,17 @@ const TaskPriorityChart = ({ taskCountsByPriority }) => {
 				<Doughnut data={chartData} options={chartOptions} />
 			</div>
 			<div style={{ flex: 1, textAlign: 'left' }}>
-				{Object.keys(taskCountsByPriority).map((label, index) => (
+				{labels.map((label, index) => (
 					<div key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
 						<Chip
 							style={{
 								backgroundColor: chartData.datasets[0].backgroundColor[index],
-								width: '20px',
-								height: '20px',
+								width: '12px',
+								height: '12px',
 								marginRight: '10px',
 							}}
 						/>
-						<Typography variant="body1">
-							{label}: {chartData.datasets[0].data[index]}
-						</Typography>
+						<Typography variant="body1">{label}</Typography>
 					</div>
 				))}
 			</div>

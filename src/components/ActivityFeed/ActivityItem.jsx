@@ -9,9 +9,8 @@ const ActivityItem = ({ activity }) => {
 				</Box>
 				<ListItemText primary={activity.activity} />
 			</ListItem>
-
-			<Typography variant="body2" style={{ marginLeft: '52px', color: '#757575' }}>
-				date
+			<Typography variant="body2" style={{ marginLeft: '62px', color: '#757575', marginBottom: '12px' }}>
+				{activity.date}
 			</Typography>
 		</>
 	);

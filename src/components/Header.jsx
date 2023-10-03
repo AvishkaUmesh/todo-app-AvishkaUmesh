@@ -12,7 +12,9 @@ const Header = () => {
 			style={{ marginLeft: '272px', width: 'calc(100% - 272px)', background: 'white', color: 'black' }}
 		>
 			<Toolbar style={{ justifyContent: 'space-between' }}>
-				<Typography variant="h6">Dashboard</Typography>
+				<Typography variant="h6" style={{ fontWeight: 'bold' }}>
+					Dashboard
+				</Typography>
 
 				{/* Icons and SVG image aligning to the right */}
 				<div style={{ display: 'flex', alignItems: 'center' }}>

@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from '@mui/material';
+import { Card, Divider, Grid, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 import { TodoContext } from '../context/TodoContext';
 import ActivityList from './ActivityFeed/ActivityList';
@@ -38,7 +38,15 @@ const TwoColumnContainer = () => {
 						boxShadow: 'none',
 					}}
 				>
-					<Typography variant="body1">Task Priorities</Typography>
+					<Typography
+						variant="h6"
+						style={{
+							marginBottom: '8px',
+						}}
+					>
+						Task Priorities
+					</Typography>
+					<Divider></Divider>
 					{Object.keys(taskCountsByPriority).length > 0 ? (
 						<TaskPriorityChart taskCountsByPriority={taskCountsByPriority} />
 					) : (
