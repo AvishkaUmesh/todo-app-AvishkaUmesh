@@ -1,6 +1,8 @@
 import { Drawer, List, ListItemButton, ListItemText, Typography } from '@mui/material';
 import React from 'react';
 
+import DashboardIcon from '../assets/Dashboard.svg';
+
 const Sidebar = () => {
 	return (
 		<Drawer
@@ -24,19 +26,30 @@ const Sidebar = () => {
 				<Typography variant="h6" style={{ fontWeight: 'bold' }}>
 					Acmy Solutions
 				</Typography>
-				{/* Logo placeholder */}
-				{/* You can replace this with an actual logo */}
 			</div>
 
 			<List>
 				<ListItemButton
 					style={{ borderRadius: '40px', backgroundColor: '#EBE6ED1A', padding: '5px', margin: '10px' }}
 				>
-					<ListItemText style={{ color: 'white' }}>
-						<Typography>Dashboard</Typography>
-					</ListItemText>
+					<ListItemText
+						primary={
+							<Typography
+								variant="inherit"
+								color="white"
+								component="div"
+								style={{ display: 'flex', alignItems: 'center' }}
+							>
+								<img
+									src={DashboardIcon}
+									alt="Dashboard Icon"
+									style={{ marginRight: '12px', height: '24px', width: '24px' }}
+								/>
+								Dashboard
+							</Typography>
+						}
+					/>
 				</ListItemButton>
-				{/* Add more list items for other links */}
 			</List>
 		</Drawer>
 	);

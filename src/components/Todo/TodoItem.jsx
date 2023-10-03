@@ -29,6 +29,7 @@ const TodoItem = ({ task }) => {
 								backgroundColor: '#E8F5E9',
 								borderRadius: '12px',
 								padding: '4px 8px',
+								fontSize: '12px',
 							}}
 						>
 							Completed
@@ -42,6 +43,7 @@ const TodoItem = ({ task }) => {
 								backgroundColor: '#F2C94C1A',
 								borderRadius: '12px',
 								padding: '4px 8px',
+								fontSize: '12px',
 							}}
 						>
 							In-Progress
@@ -52,7 +54,10 @@ const TodoItem = ({ task }) => {
 				<br />
 			</ListItem>
 			{!task.completed && (
-				<Typography variant="body2" style={{ marginLeft: '52px', color: '#BC006D' }}>
+				<Typography
+					variant="body2"
+					style={{ marginLeft: '52px', color: '#BC006D', marginTop: '12px', marginBottom: '20px' }}
+				>
 					Mark as Complete
 				</Typography>
 			)}

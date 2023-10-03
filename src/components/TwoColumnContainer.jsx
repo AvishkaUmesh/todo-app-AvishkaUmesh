@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 import { TodoContext } from '../context/TodoContext';
 import ActivityList from './ActivityFeed/ActivityList';
@@ -29,14 +29,22 @@ const TwoColumnContainer = () => {
 				{/* Content for the second column */}
 				<ActivityList />
 
-				<div>
-					<h1>Task Priorities</h1>
+				<Card
+					style={{
+						marginTop: '20px',
+						padding: '20px',
+						border: '1px solid #ccc',
+						borderRadius: '10px',
+						boxShadow: 'none',
+					}}
+				>
+					<Typography variant="body1">Task Priorities</Typography>
 					{Object.keys(taskCountsByPriority).length > 0 ? (
 						<TaskPriorityChart taskCountsByPriority={taskCountsByPriority} />
 					) : (
 						<p>No data available to display the chart.</p>
 					)}
-				</div>
+				</Card>
 			</Grid>
 		</Grid>
 	);

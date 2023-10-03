@@ -1,4 +1,4 @@
-import { Grid, List, ListItem, Typography } from '@mui/material';
+import { Divider, Grid, List, ListItem, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { TodoContext } from '../../context/TodoContext';
@@ -31,15 +31,11 @@ const TodoList = () => {
 			</ListItem>
 			{paginatedTodos.map((task) => (
 				<React.Fragment key={task.id}>
+					<Divider></Divider>
 					<TodoItem task={task} />
-					<hr
-						style={{
-							width: '100%',
-							border: '1px solid #ccc',
-						}}
-					/>
 				</React.Fragment>
 			))}
+			<Divider></Divider>
 
 			<Grid container justifyContent="center">
 				<ReactPaginate

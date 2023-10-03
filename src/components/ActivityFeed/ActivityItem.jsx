@@ -10,8 +10,8 @@ const ActivityItem = ({ activity }) => {
 				<ListItemText primary={activity.activity} />
 			</ListItem>
 
-			<Typography variant="body2" style={{ marginLeft: '52px', color: '#BC006D' }}>
-				Mark as Complete
+			<Typography variant="body2" style={{ marginLeft: '52px', color: '#757575' }}>
+				date
 			</Typography>
 		</>
 	);

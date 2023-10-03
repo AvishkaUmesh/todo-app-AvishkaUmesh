@@ -1,12 +1,27 @@
 import styled from '@emotion/styled';
-import { Alert, IconButton } from '@mui/material';
+import { Alert, IconButton, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import CloseIcon from '../assets/Close.svg';
+import Vector from '../assets/Vector.svg';
 
 const StyledAlert = styled(Alert)(({ theme }) => ({
 	backgroundColor: 'white',
 	color: 'black',
 	borderRadius: '10px',
+	width: '100%',
+}));
+
+const AlertContainer = styled.div(({ theme }) => ({
+	display: open ? 'flex' : 'none',
+	marginTop: '10px',
+	marginBottom: '20px',
+	marginLeft: '20px',
+}));
+const InnerContainer = styled.div(({ theme }) => ({
+	display: 'flex',
+	alignItems: 'center',
+	gap: '20px',
+	padding: '20px',
 }));
 
 const DismissibleAlert = () => {
@@ -17,14 +32,7 @@ const DismissibleAlert = () => {
 	};
 
 	return (
-		<div
-			style={{
-				display: open ? 'block' : 'none',
-				marginTop: '10px',
-				paddingLeft: '20px',
-				marginBottom: '20px',
-			}}
-		>
+		<AlertContainer>
 			<StyledAlert
 				severity="info"
 				icon={false}
@@ -34,15 +42,21 @@ const DismissibleAlert = () => {
 					</IconButton>
 				}
 			>
-				<div>Welcome back, John Doe</div>
-				<div>
-					The end of the year is coming. Are you planning your performance interviews? You can do this super
-					efficiently with Acmy.
-					<br />
-					<a href="http://"> Look here for more information.</a>
-				</div>
+				<InnerContainer>
+					<div style={{ flex: 1 }}>
+						<Typography style={{ fontSize: '24px', fontWeight: 600 }}>Welcome back, John Doe</Typography>
+						<Typography style={{ fontSize: '14px', color: '#757575', marginTop: '10px' }}>
+							The end of the year is coming. Are you planning your performance interviews? You can do this
+							super efficiently with Acmy.
+						</Typography>
+						<a href="http://" style={{ color: '#BC006D', marginTop: '10px', display: 'block' }}>
+							Look here for more information.
+						</a>
+					</div>
+					<img src={Vector} alt="Your SVG Icon" style={{ width: '167px', height: '120px' }} />
+				</InnerContainer>
 			</StyledAlert>
-		</div>
+		</AlertContainer>
 	);
 };
 

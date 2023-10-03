@@ -1,4 +1,4 @@
-import { List, ListItem, Typography } from '@mui/material';
+import { Divider, List, ListItem, Typography } from '@mui/material';
 import React from 'react';
 
 import avatar1 from '../../assets/Avatar-1.svg';
@@ -35,17 +35,12 @@ const ActivityList = () => {
 			}}
 		>
 			<ListItem>
-				<Typography variant="h6">Tasks</Typography>
+				<Typography variant="h6">Activity Feed</Typography>
 			</ListItem>
 			{activityList.map((activity) => (
 				<React.Fragment key={activity.id}>
+					<Divider></Divider>
 					<ActivityItem activity={activity} />
-					<hr
-						style={{
-							width: '100%',
-							border: '1px solid #ccc',
-						}}
-					/>
 				</React.Fragment>
 			))}
 		</List>
