@@ -17,7 +17,7 @@ const Header = () => {
 			}}
 		>
 			<Toolbar style={{ justifyContent: 'space-between' }}>
-				<Typography variant="h6" style={{ fontWeight: 'bold' }}>
+				<Typography variant="h6" style={{ fontWeight: 'bold', marginLeft: '10px' }}>
 					Dashboard
 				</Typography>
 
