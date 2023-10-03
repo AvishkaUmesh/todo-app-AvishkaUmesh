@@ -47,8 +47,8 @@ const TodoList = () => {
 
 			<Grid container justifyContent="center">
 				<ReactPaginate
-					previousLabel={'←'}
-					nextLabel={'→'}
+					previousLabel={'<'}
+					nextLabel={'>'}
 					breakLabel={'...'}
 					pageCount={Math.ceil(todos.length / ITEMS_PER_PAGE)}
 					marginPagesDisplayed={2}
