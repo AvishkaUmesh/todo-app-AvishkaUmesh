@@ -7,7 +7,7 @@ import ProfileIcon from '../../assets/Profile.svg';
 const Header = () => {
 	return (
 		<AppBar
-			position="static"
+			position="sticky"
 			style={{
 				marginLeft: '254px',
 				width: 'calc(100% - 254px)',
