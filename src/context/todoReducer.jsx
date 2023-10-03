@@ -6,6 +6,8 @@ const initialState = {
 
 const reducer = (state, action) => {
 	switch (action.type) {
+		case 'GET_TODOS':
+			return { ...state, loading: true };
 		case 'SET_TODOS':
 			return { ...state, todos: action.payload, loading: false };
 		case 'SET_TASK_COUNTS':

@@ -13,7 +13,7 @@ const TodoProvider = ({ children }) => {
 		const fetchTodos = async () => {
 			try {
 				// Set loading to true before fetching todos
-				dispatch({ type: 'SET_TODOS', payload: [], loading: true });
+				dispatch({ type: 'GET_TODOS' });
 
 				const response = await axios.get('https://6363c8f68a3337d9a2e7d805.mockapi.io/api/to-do');
 				const todos = response.data;
