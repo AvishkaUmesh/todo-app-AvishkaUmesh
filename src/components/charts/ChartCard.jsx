@@ -1,5 +1,5 @@
 import { Card, Divider, Typography } from '@mui/material';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { TodoContext } from '../../context/TodoContext';
 import TaskPriorityChart from './TaskPriorityChart';
 
