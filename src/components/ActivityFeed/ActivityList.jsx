@@ -1,8 +1,9 @@
-import { Divider, List, ListItem, Typography } from '@mui/material';
+import { Divider } from '@mui/material';
 import React from 'react';
 
 import avatar1 from '../../assets/Avatar-1.svg';
 import avatar2 from '../../assets/Avatar-2.svg';
+import ListCard from '../Layouts/ListCard';
 import ActivityItem from './ActivityItem';
 
 const activityList = [
@@ -29,23 +30,14 @@ const activityList = [
 
 const ActivityList = () => {
 	return (
-		<List
-			style={{
-				border: '1px solid #ccc',
-				borderRadius: '10px',
-				backgroundColor: 'white',
-			}}
-		>
-			<ListItem>
-				<Typography variant="h6">Activity Feed</Typography>
-			</ListItem>
+		<ListCard title="Activity Feed">
 			{activityList.map((activity) => (
 				<React.Fragment key={activity.id}>
 					<Divider></Divider>
 					<ActivityItem activity={activity} />
 				</React.Fragment>
 			))}
-		</List>
+		</ListCard>
 	);
 };
 export default ActivityList;

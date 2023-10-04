@@ -1,8 +1,9 @@
-import { Divider, Grid, List, ListItem, Typography } from '@mui/material';
+import { Divider, Grid, ListItem, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { TodoContext } from '../../context/TodoContext';
 import FailToFetch from '../Errors/FailToFetch';
+import ListCard from '../Layouts/ListCard';
 import LoadingSpinner from '../Layouts/LoadingSpinner';
 import TodoItem from './TodoItem';
 
@@ -63,21 +64,7 @@ const TodoList = () => {
 			</ListItem>
 		);
 	}
-	return (
-		<List
-			style={{
-				border: '1px solid #ccc',
-				borderRadius: '10px',
-				backgroundColor: 'white',
-			}}
-		>
-			<ListItem>
-				<Typography variant="h6">Tasks</Typography>
-			</ListItem>
-
-			{content}
-		</List>
-	);
+	return <ListCard title="Tasks">{content}</ListCard>;
 };
 
 export default TodoList;
