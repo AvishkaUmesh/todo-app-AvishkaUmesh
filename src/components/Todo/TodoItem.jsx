@@ -17,7 +17,7 @@ const TodoItem = ({ task }) => {
 		<>
 			<ListItem
 				style={{
-					padding: '8px 16px',
+					padding: '0px 16px',
 					borderRadius: '10px',
 				}}
 			>
