@@ -15,16 +15,63 @@ const TodoItem = ({ task }) => {
 	};
 	return (
 		<>
-			<ListItem style={{ height: '48px', marginTop: '5px', marginBottom: '5px' }}>
-				<Box component="span" sx={{ mr: 2 }}>
-					<img src={priorityIcons[task.priority]} alt={`${task.priority} priority`} />
+			<ListItem
+				style={{
+					padding: '8px 16px',
+					borderRadius: '10px',
+				}}
+			>
+				<Box
+					component="div"
+					sx={{
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}
+				>
+					<Box
+						component="span"
+						sx={{
+							marginRight: { xs: 1, sm: 2 },
+						}}
+					>
+						<img
+							src={priorityIcons[task.priority]}
+							alt={`${task.priority} priority`}
+							style={{ height: '24px', width: '24px' }}
+						/>
+					</Box>
+					<ListItemText
+						primary={task.todo}
+						primaryTypographyProps={{
+							variant: 'body1',
+							style: {
+								fontSize: '16px',
+								paddingBlockEnd: '5px',
+							},
+						}}
+					/>
 				</Box>
-				<ListItemText primary={task.todo} />
-				<Box component="span" sx={{ ml: 2 }}>
-					<StatusBadge completed={task.completed} />
+				<Box
+					component="div"
+					sx={{
+						display: 'flex',
+						justifyContent: 'flex-end',
+						alignItems: 'center',
+						marginRight: { xs: 1, sm: 2 },
+						marginLeft: 'auto',
+					}}
+				>
+					<Box sx={{ marginRight: '4px' }}>
+						<StatusBadge completed={task.completed} />
+					</Box>
+					<DateText
+						createdAt={task.createdAt}
+						style={{
+							fontSize: '14px',
+						}}
+					/>
 				</Box>
-				<DateText createdAt={task.createdAt} />
-				<br />
 			</ListItem>
 			<CompleteBtn completed={task.completed} />
 		</>

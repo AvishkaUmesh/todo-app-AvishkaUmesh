@@ -30,8 +30,7 @@ const DismissibleAlert = () => {
 				backgroundColor: 'white',
 				color: 'black',
 				borderRadius: '10px',
-				marginTop: '20px',
-				marginLeft: '20px',
+				marginTop: '30px',
 				marginBottom: '20px',
 			}}
 		>

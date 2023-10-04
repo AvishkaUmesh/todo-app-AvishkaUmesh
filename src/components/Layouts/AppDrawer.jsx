@@ -1,24 +1,21 @@
-import { Drawer, List, ListItemButton, ListItemText, Typography } from '@mui/material';
-
+import { Divider, List, ListItemButton, ListItemText, Typography } from '@mui/material';
 import DashboardIcon from '../../assets/Dashboard.svg';
 
-const Sidebar = () => {
+const AppDrawer = () => {
 	return (
-		<Drawer
-			variant="permanent"
-			style={{ width: '272px', color: '#fff' }}
-			PaperProps={{
-				sx: {
-					backgroundColor: '#33074F',
-				},
+		<div
+			style={{
+				background: '#33074F',
+				height: '100vh',
+				textAlign: 'center',
+				color: 'white',
 			}}
 		>
 			<div
 				style={{
-					padding: '20px',
+					padding: '16px',
 					textAlign: 'center',
 					color: 'white',
-					width: '253px',
 					background: '#EBE6ED1A',
 				}}
 			>
@@ -26,6 +23,7 @@ const Sidebar = () => {
 					Acmy Solutions
 				</Typography>
 			</div>
+			<Divider />
 
 			<List>
 				<ListItemButton
@@ -55,8 +53,7 @@ const Sidebar = () => {
 					/>
 				</ListItemButton>
 			</List>
-		</Drawer>
+		</div>
 	);
 };
-
-export default Sidebar;
+export default AppDrawer;

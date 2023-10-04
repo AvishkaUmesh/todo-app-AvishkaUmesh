@@ -69,7 +69,6 @@ const TodoList = () => {
 				border: '1px solid #ccc',
 				borderRadius: '10px',
 				backgroundColor: 'white',
-				marginLeft: '20px',
 			}}
 		>
 			<ListItem>
