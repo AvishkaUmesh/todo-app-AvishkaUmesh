@@ -49,6 +49,12 @@ npm run dev
 
 This will start the development server and open the Todo App in your default web browser.
 
+If not visit
+
+```
+http://localhost:5173
+```
+
 To run the `lint` and `lint:fix` scripts defined in `package.json`, follow these instructions:
 
 1. **Run Linting:**
