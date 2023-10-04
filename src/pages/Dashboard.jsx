@@ -1,4 +1,9 @@
+import ActivityList from '../components/ActivityFeed/ActivityList';
+import DismissibleAlert from '../components/Alerts/DismissibleAlert';
 import Main from '../components/Layouts/Main';
+import TwoColumnContainer from '../components/Layouts/TwoColumnContainer';
+import TodoList from '../components/Todo/TodoList';
+import ChartCard from '../components/charts/ChartCard';
 
 const Dashboard = () => {
 	return (
@@ -10,7 +15,18 @@ const Dashboard = () => {
 				backgroundColor: '#F5F5F5',
 			}}
 		>
-			<Main />
+			<Main>
+				<DismissibleAlert />
+				<TwoColumnContainer
+					firstCol={<TodoList />}
+					secondCol={
+						<>
+							<ActivityList />
+							<ChartCard />
+						</>
+					}
+				/>
+			</Main>
 		</div>
 	);
 };

@@ -1,9 +1,8 @@
 import { Grid } from '@mui/material';
-import ActivityList from '../ActivityFeed/ActivityList';
-import TodoList from '../Todo/TodoList';
-import ChartCard from '../charts/ChartCard';
 
-const TwoColumnContainer = () => {
+import PropTypes from 'prop-types';
+
+const TwoColumnContainer = ({ firstCol, secondCol }) => {
 	return (
 		<Grid
 			container
@@ -16,19 +15,21 @@ const TwoColumnContainer = () => {
 			{/* First column */}
 			<Grid item xs={12} sm={12} md={12} lg={8}>
 				{' '}
-				{/* Changed xs to sm */}
-				<TodoList />
+				{firstCol}
 			</Grid>
 
 			{/* Second column */}
 			<Grid item xs={12} sm={12} md={12} lg={4}>
 				{' '}
-				{/* Changed xs to sm */}
-				<ActivityList />
-				<ChartCard />
+				{secondCol}
 			</Grid>
 		</Grid>
 	);
+};
+
+TwoColumnContainer.propTypes = {
+	firstCol: PropTypes.node,
+	secondCol: PropTypes.node,
 };
 
 export default TwoColumnContainer;

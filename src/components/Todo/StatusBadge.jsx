@@ -12,6 +12,7 @@ const StatusBadge = ({ completed }) => {
 						padding: '4px 8px',
 						fontSize: '12px',
 						fontWeight: 500,
+						display: 'inline-block',
 					}}
 				>
 					Done
@@ -27,6 +28,7 @@ const StatusBadge = ({ completed }) => {
 						padding: '4px 8px',
 						fontSize: '12px',
 						fontWeight: 500,
+						display: 'inline-block',
 					}}
 				>
 					In-Progress

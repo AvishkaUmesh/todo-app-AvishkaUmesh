@@ -11,14 +11,13 @@ import * as React from 'react';
 import ChevronDownIcon from '../../assets/Chevron-down.svg';
 import NotificationIcon from '../../assets/Notifications.svg';
 import ProfileIcon from '../../assets/Profile.svg';
-import DismissibleAlert from '../Alerts/DismissibleAlert';
 import AppDrawer from './AppDrawer';
-import TwoColumnContainer from './TwoColumnContainer';
 
 const drawerWidth = 240;
 
 function Main(props) {
 	const { window } = props;
+	const { children } = props;
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 
 	const handleDrawerToggle = () => {
@@ -49,7 +48,15 @@ function Main(props) {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Typography variant="h6" noWrap component="div">
+					<Typography
+						variant="h6"
+						noWrap
+						component="div"
+						style={{
+							marginLeft: '10px',
+							fontWeight: 'bold',
+						}}
+					>
 						Dashboard
 					</Typography>
 
@@ -106,10 +113,9 @@ function Main(props) {
 			<Box
 				component="main"
 				sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-				style={{ marginLeft: '20px', marginTop: '40px' }}
+				style={{ marginLeft: '10px', marginTop: '40px' }}
 			>
-				<DismissibleAlert />
-				<TwoColumnContainer />
+				{children}
 			</Box>
 		</Box>
 	);
@@ -117,6 +123,7 @@ function Main(props) {
 
 Main.propTypes = {
 	window: PropTypes.func,
+	children: PropTypes.node,
 };
 
 export default Main;
