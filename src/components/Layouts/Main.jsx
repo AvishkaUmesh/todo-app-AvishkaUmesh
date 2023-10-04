@@ -53,7 +53,6 @@ function Main(props) {
 						noWrap
 						component="div"
 						style={{
-							marginLeft: '10px',
 							fontWeight: 'bold',
 						}}
 					>
@@ -113,7 +112,7 @@ function Main(props) {
 			<Box
 				component="main"
 				sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-				style={{ marginLeft: '10px', marginTop: '40px' }}
+				style={{ marginTop: '40px' }}
 			>
 				{children}
 			</Box>
